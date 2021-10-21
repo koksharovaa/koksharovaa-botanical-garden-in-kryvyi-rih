@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Botanical Garden</title>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@500&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  
+  <body class="body"> 
+    <div class="container">
+    <header>
+      <h1 class="section__title">
+          <a id="header" href="./index.html">Мальовничий куточок Криворіжжя</a>
+      </h1>      
+      <nav class="site-nav">
+          <ul class="list">
+            <li class="list-item"><a href="./index.html">Головна</a></li>
+            <li class="list-item">
+              <a href="./botanical-garden-winter.html">Ботанічний Сад взимку</a>
+            </li>
+            <li class="list-item">
+              <a href="./botanical-garden-spring.html"
+                >Ботанічний Сад навесні</a
+              >
+            </li>
+            <li class="list-item">
+              <a href="./botanical-garden-summer.html">Ботанічний Сад влітку</a>
+            </li>
+            <li class="list-item">
+              <a href="./botanical-garden-autumn.html">Ботaнічний Сад восени</a>
+            </li>
+          </ul>
+        </nav>
+    </header>
+
+    <main>
+      <section class="slider">
+        <h1 class="general-info__title">Кривий Ріг: ботанічний сад</h1>
+        <div id="gallery" class="gallery">
+          <img id="currentPhoto" src="./images/Photo1.jpg" alt="" />
+        </div>
+        <button class="gallery-button" onclick="showNextPhoto()">Наступне фото</button>   
+      </section>
+
+      <section>
+        <h2>Опис пам'ятки</h2>
+        <p>
+          Криворізький ботанічний сад Національної академії наук України був заснований близько 30 років тому, на території, що колись належала колгоспу імені Тараса Шевченка. З тих пір щорічно колекції криворізьких вчених-ботаніків розширюються, обростаючи все новими сортами декоративних рослин. У будь-який час року в ботанічному саду є на що подивитися. Сюди можна прийти і навесні, і влітку, і восени, і навіть взимку. Понад чотири тисячі рослин з різних куточків світу знайшли свій будинок тут, в Кривому Розі, а колекція дерев і чагарників віднесена до Національного надбання України. Тут ростуть ще кілька сотень видів рослин, які є на сьогоднішній день рідкісними і зникаючими і які занесені до Червоного списку Дніпропетровщини, світу та Європи, Червоної книги України. Оскільки площа саду велика і обчислюється кілометрами, тут можна влаштувати щось на зразок невеликого походу, або прогулятися по парковій зоні, а хтось віддає перевагу валятися весь день на травичці. Найкраще тут навесні, коли все навколо квітне і вражає буйством фарб і ароматів.
+        </p>
+      </section>
+      <a class="button-up" href="#header" aria-label="button up">
+        <img src="./images/arrow-up.svg" alt="button up" />
+      </a>
+    </main>
+  </div>
+
+    <footer>
+      <div class="footer-container">
+      <a href="./index.html">Криворізький ботанічний сад НАН України</a>
+      <p>Кокшарова Анастасія 2021</p>
+      </div>
+    </footer>
+    </body>
+
+    <!-- слайдер -->
+    <script>
+      var photosCount = 20;
+      var currentPhotoIndex = 1;
+      function showNextPhoto() {
+        
+        currentPhotoIndex++;
+        if (currentPhotoIndex > photosCount) currentPhotoIndex = 1;
+
+        var elem = document.getElementById('currentPhoto');
+        elem.src = 'images/Photo' + currentPhotoIndex + '.jpg';
+      }
+    </script>
+  </body>
+</html>
